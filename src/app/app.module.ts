@@ -13,6 +13,9 @@ import { HomeComponent } from './home/home.component';
 import { PurchasesComponent } from './purchases/purchases.component';
 import { ScoreComponent } from './score/score.component';
 import { CharitiesComponent } from './charities/charities.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { PurchaseComponent } from './shared/purchase/purchase.component';
+import { CharityComponent } from './shared/charity/charity.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +23,9 @@ import { CharitiesComponent } from './charities/charities.component';
     HomeComponent,
     PurchasesComponent,
     ScoreComponent,
-    CharitiesComponent
+    CharitiesComponent,
+    PurchaseComponent,
+    CharityComponent
   ],
   imports: [
     BrowserModule,
@@ -29,7 +34,8 @@ import { CharitiesComponent } from './charities/charities.component';
     MatCardModule,
     MatToolbarModule,
     MatMenuModule,
-    MatButtonModule
+    MatButtonModule,
+    NgbModule
     
 
   ],
