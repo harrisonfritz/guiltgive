@@ -1,1 +1,61 @@
-<p>score works!</p>
+<h1>
+   You rank in the  {{title}} percentile for generostity
+  </h1>
+
+
+
+  <div class="bargraph">
+    <canvas
+        baseChart
+        [chartType]="'bar'"
+        [datasets]="chartData"
+        [labels]="labels"
+        [options]="chartOptions"
+        [legend]="true"
+        [colors]="colors"
+        (chartClick)="onChartClick($event)">
+    </canvas>
+  </div>
+
+
+  <div class="bargraph">
+    <canvas
+        baseChart
+        [chartType]="'line'"
+        [datasets]="chartData"
+        [labels]="labels"
+        [options]="chartOptions"
+        [legend]="true"
+        [colors]="colors"
+        (chartClick)="onChartClick($event)">
+    </canvas>
+  </div>
+
+
+  <div class="bargraph">
+    <canvas
+        baseChart
+        [chartType]="'doughnut'"
+        [datasets]="chartData"
+        [labels]="labels"
+        [options]="chartOptions"
+        [legend]="true"
+        [colors]="colors"
+        (chartClick)="onChartClick($event)">
+    </canvas>
+  </div>
+
+
+
+  <div class="bargraph">
+    <canvas
+        baseChart
+        [chartType]="'bar'"
+        [datasets]="chartData"
+        [labels]="labels"
+        [options]="chartOptions"
+        [legend]="true"
+        [colors]="colors"
+        (chartClick)="onChartClick($event)">
+    </canvas>
+  </div>

@@ -14,8 +14,9 @@ import { PurchasesComponent } from './purchases/purchases.component';
 import { ScoreComponent } from './score/score.component';
 import { CharitiesComponent } from './charities/charities.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { PurchaseComponent } from './shared/purchase/purchase.component';
-import { CharityComponent } from './shared/charity/charity.component';
+import { MatIconModule } from '@angular/material/icon';
+import { ChartsModule } from 'ng2-charts';
+
 
 @NgModule({
   declarations: [
@@ -24,8 +25,8 @@ import { CharityComponent } from './shared/charity/charity.component';
     PurchasesComponent,
     ScoreComponent,
     CharitiesComponent,
-    PurchaseComponent,
-    CharityComponent
+    PurchasesComponent,
+    CharitiesComponent
   ],
   imports: [
     BrowserModule,
@@ -35,7 +36,9 @@ import { CharityComponent } from './shared/charity/charity.component';
     MatToolbarModule,
     MatMenuModule,
     MatButtonModule,
-    NgbModule
+    NgbModule,
+    MatIconModule,
+    ChartsModule
     
 
   ],
