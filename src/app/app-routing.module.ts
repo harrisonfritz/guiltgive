@@ -4,7 +4,16 @@ import { HomeComponent } from './home/home.component';
 import { PurchasesComponent } from './purchases/purchases.component'
 import { ScoreComponent } from './score/score.component'
 import { CharitiesComponent } from './charities/charities.component'
-const routes: Routes = [{path:'home', component:HomeComponent},{path:'home', component:HomeComponent},{path:'purchases', component:PurchasesComponent},{path:'score', component:ScoreComponent},{path:'charities', component:CharitiesComponent}];
+import { FormComponent } from './form/form.component';
+import {DonationIncomeComponent} from './donation-income/donation-income.component'
+const routes: Routes = [{path:'home', component:HomeComponent},
+{path:'home', component:HomeComponent},
+{path:'purchases', component:PurchasesComponent},
+{path:'score', component:ScoreComponent},
+{path:'charities', component:CharitiesComponent},
+{path:'form', component:FormComponent},
+{path:'donation', component: DonationIncomeComponent}
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

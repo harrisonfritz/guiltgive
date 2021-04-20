@@ -1,12 +1,14 @@
 
 
 
-<button mat-button [matMenuTriggerFor]="menu">Menu</button>
-<mat-menu #menu="matMenu">
-  <button mat-menu-item>Item 1</button>
-  <button mat-menu-item>Item 2</button>
-</mat-menu>
+  <div>
+    <button class="add-button" (click)="addPurchase()"> Add a Purchase</button>
+  </div>
+  <div>
+    <button class="add-button" (click)="updateDonation()"> Update Donation Information </button>
+  </div>
+  <div>
+    <button class="add-button" (click)="calculateGenerosity()"> Calculate Generosity</button>
+  </div>
 
-<h1>
-    Welcome to GuiltGive!
-</h1>
+

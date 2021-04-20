@@ -4,6 +4,6 @@ Guiltgive allows people to compare their genersosity with others in their peer g
 
 ## Metrics
 
-Each purchase is given a neccessity score. The aggregate necessity score is used as an input into the overall genersotiy score. See how you compare with a bell-curve of people who make the samea mount of money as you.
+Each purchase is given a neccessity score. The aggregate necessity score is used as an input into the overall generosity score. See how you compare with a bell-curve of people who make the samea mount of money as you.
 
 ## Peer to Peer

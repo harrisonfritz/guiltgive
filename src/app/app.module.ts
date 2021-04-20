@@ -16,7 +16,11 @@ import { CharitiesComponent } from './charities/charities.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { MatIconModule } from '@angular/material/icon';
 import { ChartsModule } from 'ng2-charts';
-
+import { FormComponent } from './form/form.component';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatSelectModule} from '@angular/material/select';
+import { DonationIncomeComponent } from './donation-income/donation-income.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -26,7 +30,9 @@ import { ChartsModule } from 'ng2-charts';
     ScoreComponent,
     CharitiesComponent,
     PurchasesComponent,
-    CharitiesComponent
+    CharitiesComponent,
+    FormComponent,
+    DonationIncomeComponent
   ],
   imports: [
     BrowserModule,
@@ -38,7 +44,10 @@ import { ChartsModule } from 'ng2-charts';
     MatButtonModule,
     NgbModule,
     MatIconModule,
-    ChartsModule
+    ChartsModule,
+    MatFormFieldModule,
+    MatSelectModule,
+    FormsModule
     
 
   ],
