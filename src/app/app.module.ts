@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-
+import { MatInput, MatInputModule } from '@angular/material/input';
 import { MatSliderModule } from '@angular/material/slider';
 import { MatCardModule } from '@angular/material/card';
 import { MatToolbarModule} from '@angular/material/toolbar';
@@ -20,7 +20,12 @@ import { FormComponent } from './form/form.component';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatSelectModule} from '@angular/material/select';
 import { DonationIncomeComponent } from './donation-income/donation-income.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
+import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from './register/register.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +37,9 @@ import { FormsModule } from '@angular/forms';
     PurchasesComponent,
     CharitiesComponent,
     FormComponent,
-    DonationIncomeComponent
+    DonationIncomeComponent,
+    LoginComponent,
+    RegisterComponent,
   ],
   imports: [
     BrowserModule,
@@ -47,7 +54,12 @@ import { FormsModule } from '@angular/forms';
     ChartsModule,
     MatFormFieldModule,
     MatSelectModule,
-    FormsModule
+    MatSnackBarModule,
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule,
+    NoopAnimationsModule,
+    MatInputModule
     
 
   ],

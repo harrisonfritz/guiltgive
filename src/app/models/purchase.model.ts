@@ -3,5 +3,5 @@
     'item': string;
     'dollarCost': number;
     'necessity': number;
-    'date': Date;
+    'month': string;
   }

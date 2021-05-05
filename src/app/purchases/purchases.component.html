@@ -1,21 +1,54 @@
-
+<h1>
+  {{this.testVar}}
+</h1>
 <form>
     <div class="form-group">
       <label for="purchaseForm"> What did you buy? </label>
-      <input type="purchase" class="form-control" id="purhcaseForm" aria-describedby="purhcaseHelp" placeholder="Enter purchase i.e. groceries">
+      <input #purchase  type="purchase" class="form-control" id="purhcaseForm" aria-describedby="purhcaseHelp" placeholder="Enter purchase i.e. groceries">
     </div>
     <div class="form-group">
       <label for="purchaseForm"> How much did it cost? </label>
-      <input [(ngModel)]="cost" type="number" class="form-control" id="purchaseForm" aria-describedby="purchaseHelp" placeholder="Enter dollar amount i.e. 18.39">
+      <input #cost type="number" class="form-control" id="purchaseForm" aria-describedby="purchaseHelp" placeholder="Enter dollar amount i.e. 18.39">
+    </div>
+    <div class="form-group">
+      <label for="exampleFormControlSelect1"> which month was the purchase made in?</label>
+      <select #month class="form-control" id="exampleFormControlSelect1">
+        <option>January</option>
+        <option>February</option>
+        <option>March</option>
+        <option>April</option>
+        <option>May</option>
+        <option>June</option>
+        <option>July</option>
+        <option>August</option>
+        <option>September</option>
+        <option>October</option>
+        <option>November</option>
+        <option>December</option>
+      </select>
     </div>
     <div class="form-group">
         <label for="formControlRange">How necessary was this purchase</label>
-        <input type="range" class="form-control-range" id="formControlRange">
+        <input #necessity  type="range" list="needscale" min="0" max="10" class="form-control-range" id="formControlRange">
+    <datalist id="needscale">
+      <option value="not necessary at all">0</option>
+      <option value="slightly necessary">1</option>
+      <option value="somewhat necessary">2</option>
+      <option value="necessary">3</option>
+      <option value="absolutely necessary">4</option>
+      <option value="absolutely necessary">5</option>
+    </datalist>
     </div>
 
-    <button type="submit" class="btn btn-primary" (click)="addPurchase">Submit</button>
+    <button type="submit" class="btn btn-primary"  (click)="addPurchase(cost.value, purchase.value, necessity.value, month.value)" (click)="getTotalLivesSaved()">Submit</button>
+    <button type="submit" class="btn btn-secondary"(click)="clearPurchases()">clear</button>
   </form>
-    
+
+   <div>
+     <h1>
+       You could have saved {{this.totalLivesSaved}} lives
+     </h1>
+   </div> 
 <table class="table table-striped">
     <thead>
     <tr>
@@ -24,6 +57,7 @@
       <th scope="col">Cost in USD</th>
       <th scope="col">Cost in {{this.charityUnit}}</th>
       <th scope="col">Necessity</th>
+      <th scope="col">Month</th>
     </tr>
     </thead>
 
@@ -32,9 +66,9 @@
             <td>{{ i+1 }}</td>
             <td>{{ purchase.item}} </td>
             <td>{{ purchase.dollarCost }} </td>
-            <td>{{ charity1.lifeSaved/purchase.dollarCost }} </td>
+            <td>{{purchase.dollarCost /charity1.lifeSaved }} </td>
             <td>{{ purchase.necessity}} </td>
-
+            <td>{{ purchase.month}} </td>
     </tbody>
   </table>
 

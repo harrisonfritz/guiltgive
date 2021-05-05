@@ -1,4 +1,4 @@
-<mat-toolbar class="toolbar" color="primary">
+<mat-toolbar *ngIf="isUser" class="toolbar" color="primary">
   <button mat-button class="button" routerLink="/home">
     Home
   </button>
@@ -12,6 +12,9 @@
   </button>
   <button mat-button class="button" routerLink="/charities">
     Charities
+  </button>
+  <button mat-button class="button" (click)="logout()">
+    LogOut
   </button>
 </mat-toolbar>
 <router-outlet></router-outlet>

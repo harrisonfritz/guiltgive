@@ -24,6 +24,6 @@ export class HomeComponent implements OnInit {
   }
   
   updateDonation(){
-    this.router.navigateByUrl('/donation-income')
+    this.router.navigateByUrl('/donation')
   }
 }

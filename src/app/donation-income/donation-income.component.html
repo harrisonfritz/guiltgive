@@ -2,12 +2,24 @@
 <form>
 <div class="form-group">
     <label for="purchaseForm"> What is your annual income? </label>
-    <input type="purchase" class="form-control" id="purchaseForm" aria-describedby="purchaseHelp" placeholder="Enter purchase">
+    <input #income type="purchase" class="form-control" id="purchaseForm" aria-describedby="purchaseHelp" placeholder="Enter purchase">
 </div>
 <div class="form-group">
     <label for="purchaseForm"> How much do you give to charity every year? </label>
-    <input type="purchase" class="form-control" id="purchaseForm" aria-describedby="purchaseHelp" placeholder="Enter purchase">
+    <input #donation type="purchase" class="form-control" id="purchaseForm" aria-describedby="purchaseHelp" placeholder="Enter purchase">
 </div>
 
 </form>
-<button type="submit" class="btn btn-primary">Submit</button>
+<button (click)="updateIncome(income)" (click)="updateDonation(donation)"type="submit" class="btn btn-primary">Submit</button>
+<div *ngIf="!this.income.value">
+    <h1>
+Please enter your annual income and annual donations to charity
+    </h1>
+</div>
+<div *ngIf="this.income.value">
+    <h1>
+    your income is {{this.income.value}}
+    your charitable donation is {{this.donation.value}} 
+    you donate {{(this.donation.value / this.income.value)*100}}% of your income to charity
+    </h1>
+</div>

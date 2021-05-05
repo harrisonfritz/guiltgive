@@ -4,9 +4,17 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
+    "@koa/cors": "^3.1.0",
+    "bcryptjs": "^2.4.3",
+    "express-jwt": "^6.0.0",
+    "jsonwebtoken": "^8.5.1",
     "koa": "^2.13.1",
+    "koa-body": "^4.2.0",
+    "koa-bodyparser": "^4.3.0",
+    "koa-cors": "0.0.16",
+    "koa-jwt": "^4.0.1",
     "koa-router": "^10.0.0",
-    "mongoose": "^5.12.2"
+    "mongoose": "^5.12.7"
   },
   "devDependencies": {},
   "scripts": {
